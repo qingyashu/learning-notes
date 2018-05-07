@@ -1,4 +1,4 @@
-#Arrow Function
+# Arrow Function
 * Arrow function does not create `this` pointer, `this` inside refers to the one of outer enclosure
 * Arrow function does not have `arguments` object, not `new.target` object, nor `super` object. 
 * Arrow function allows __rest parameters__
@@ -14,7 +14,7 @@ statements }
 var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c; f(); // 6
 ```
 
-#The "arguments" object
+# The "arguments" object
 * The `arguments` object is a special object within all functions, it refers to the parameters of that function: 
 ```javascript
 function func1(a, b, c) {

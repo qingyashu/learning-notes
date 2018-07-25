@@ -44,3 +44,22 @@ const args = Array.from(arguments);
 ```
 * `arguments` object is like `...restArgs` usage, but they have differences: `...restArgs` is normal Array object, `arguments` is whole argument list. 
 # 
+
+
+# Using Promise
+* `Promise` is an object representing the eventual completion or failure of an asynchronouse operation. 
+* `Promise` can be chained into a promise chain.
+```javascript
+doSomething().then(function(result) {
+  return doSomethingElse(result);
+})
+.then(function(newResult) {
+  return doThirdThing(newResult);
+})
+.then(function(finalResult) {
+  console.log('Got the final result: ' + finalResult);
+})
+.catch(failureCallback);
+```
+* The arguments to `then` are optional, and `catch(failureCallback)` is short for `then(null, failureCallback)`. 
+* We can chain after a failure, i.e. a `catch`, which is useful to accomplish new actions even after an action failed in the cahin. 

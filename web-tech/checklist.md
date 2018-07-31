@@ -3,21 +3,22 @@
 
 1. [ ] Basics
     1. [ ] HTML
-        * [ ] Learn the basics of HTML
-        * [ ] Make a few pages as an exercise
+        * [x] Learn the basics of HTML
+        * [x] Make a few pages as an exercise
     2. [ ] CSS
-        * [ ] Learn the basics of CSS
-        * [ ] Style pages from previous step
-        * [ ] Build a page with grid and flexbox
+        * [x] Learn the basics of CSS
+        * [x] Style pages from previous step
+        * [ ] Grid
+        * [ ] Flexbox
     3. [ ] JS Basics
-        * [ ] Get familiar with the syntax
-        * [ ] Learn basic operations on DOM
+        * [x] Get familiar with the syntax
+        * [x] Learn basic operations on DOM
         * [ ] Learn mechanisms typical for JS (Hoisting, Event Bubbling, Prototyping)
-        * [ ] Make some AJAX (XHR) calls
+        * [x] Make some AJAX (XHR) calls
         * [ ] Learn new features (ECMA Script 6+)
         * [ ] Additionally, get familiar with jQuery library
 2. [ ] General Development Skills
-    1. [ ] Learn GIT, create a few repositories on GitHub, share your code with other people
+    1. [x] Learn GIT, create a few repositories on GitHub, share your code with other people
     2. [ ] Know HTTP(S) protocol, request methods (GET, POST, PUT, PATCH, DELETE, OPTIONS)
     3. [ ] Don't be afraid of using Google, [Power Searching with Google](http://www.powersearchingwithgoogle.com/)
     4. [ ] Get familiar with terminal, configure your shell (bash, zsh, fish)

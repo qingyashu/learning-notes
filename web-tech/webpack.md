@@ -1,0 +1,4 @@
+- Tree Shaking
+  - change mode to `production`
+  - Use ES2015 module syntax (i.e. `import` and `export`).
+  - Add a `"sideEffects"` property to your project's `package.json` file.

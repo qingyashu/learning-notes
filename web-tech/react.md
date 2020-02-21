@@ -38,5 +38,73 @@ this.setState((prevState, props) => ({
   counter: prevState.counter + props.increment
 }));
 ```
-# Other Tips
+# React Router
+- 3 Types of components in React Router
+  - Router components
+  - Route matching components
+  - Navigation components
+- Router components:
+  - `<BrowserRouter>`: use this if you have a server that responds to requests
+  - `<HashRouter>`: for static file server
+  - Both of these create specialized history object. 
+- Route matching components: `<Route>` and `<Switch>`
+  - `<Route>` compares `path` prop to the current location's pathname. When match, it renders. When not match, it renders null. A `<Route>` with no `path` prop will always match and render. 
+```
+// when location = { pathname: '/about' }
+<Route path='/about' component={About}/> // renders <About/>
+<Route path='/contact' component={Contact}/> // renders null
+<Route component={Always}/> // renders <Always/>
+```
+  - `<Switch>` will iterate all its `<Route>` children and render the first one that matches current location. It can used to for animation transitions between routes, or 404 pages. 
+```
+<Switch>
+  <Route exact path='/' component={Home}/>
+  <Route path='/about' component={About}/>
+  <Route path='/contact' component={Contact}/>
+  {/* when none of the above match, <NoMatch> will be rendered */}
+  <Route component={NoMatch}/>
+</Switch>
+```
+  - Route rendering props: `component`, `render`, and `children`
+    - `component`: for existing components
+    - `render`: takes in inline function, to pass in-scope variables to the components. 
+    - Don't use `component` with inline functions. 
+```
+const Home = () => <div>Home</div>
 
+const App = () => {
+  const someVariable = true;
+  
+  return (
+    <Switch>
+      {/* these are good */}
+      <Route exact path='/' component={Home} />
+      <Route
+        path='/about'
+        render={(props) => <About {...props} extra={someVariable} />}
+      />
+      {/* do not do this */}
+      <Route
+        path='/contact'
+        component={(props) => <Contact {...props} extra={someVariable} />}
+      />  
+    </Switch>
+  )
+}
+```
+- Navigation
+  - `<Link>`: render an `<a>` tag
+```
+<Link to='/'>Home</Link>
+// <a href='/'>Home</a>
+```
+  - `<NavLink>`: render an `<a>` with active state when current location matches path. 
+```
+// location = { pathname: '/react' }
+<NavLink to='/react' activeClassName='hurray'>React</NavLink>
+// <a href='/react' className='hurray'>React</a>
+```
+  - `<Redirect>`: force navigation
+```
+<Redirect to='/login'/>
+```

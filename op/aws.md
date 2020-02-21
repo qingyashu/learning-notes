@@ -1,0 +1,11 @@
+## Amazon S3
+  - Amazon S3 stands for "Amazon Simple Storage Service". It is designed to make web-scale computing easier for developers. It provides interfaces for store, retrieve data. 
+  - **Bucket** is container for objects stored in Amazon S3. Purposes of buckets are: 
+    - Organize Amazon S3 namespaces at the highest level
+    - Identify account responsible for storage and data transfer charges
+    - Play role in access control
+    - Serve as the unit of aggregation for usage reporting
+    - Example: an object named `photos/puppy.jpg` is stored in the `johnsmith` bucket, then addressable using the URL: `http://johnsmith.s3.amazonaws.com/photos/puppy.jpg`
+  - **Object** is fundamental entities stored in Amazon S3. It is uniquely identified within a bucket by a key and a version ID. 
+  - **Regions**: Object stored in a region never leave the region unless explicitly transfer to another region. 
+  - ** 
